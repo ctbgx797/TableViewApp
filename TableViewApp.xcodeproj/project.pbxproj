@@ -12,6 +12,7 @@
 		3F1B3A6422A7552500ABEF61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B3A6222A7552500ABEF61 /* Main.storyboard */; };
 		3F1B3A6622A7552600ABEF61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B3A6522A7552600ABEF61 /* Assets.xcassets */; };
 		3F1B3A6922A7552600ABEF61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B3A6722A7552600ABEF61 /* LaunchScreen.storyboard */; };
+		3F1B3A7122A76E9B00ABEF61 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B3A7022A76E9B00ABEF61 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3F1B3A6522A7552600ABEF61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F1B3A6822A7552600ABEF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F1B3A6A22A7552600ABEF61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1B3A7022A76E9B00ABEF61 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				3F1B3A5E22A7552500ABEF61 /* AppDelegate.swift */,
 				3F1B3A6022A7552500ABEF61 /* ViewController.swift */,
+				3F1B3A7022A76E9B00ABEF61 /* AddViewController.swift */,
 				3F1B3A6222A7552500ABEF61 /* Main.storyboard */,
 				3F1B3A6522A7552600ABEF61 /* Assets.xcassets */,
 				3F1B3A6722A7552600ABEF61 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				3F1B3A6122A7552500ABEF61 /* ViewController.swift in Sources */,
 				3F1B3A5F22A7552500ABEF61 /* AppDelegate.swift in Sources */,
+				3F1B3A7122A76E9B00ABEF61 /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
