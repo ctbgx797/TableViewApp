@@ -20,12 +20,38 @@ class AddViewController: UIViewController, UITextFieldDelegate {
 
     }
     @IBAction func addText(_ sender: UIButton) {
+        // create the alert
+        let alert = UIAlertController(title: "Error", message: "文字を入力して下さい｡", preferredStyle: UIAlertController.Style.alert)
         
-        //現在の配列を取り出す
-        if (UserDefaults.standard.object(forKey: "memo") != nil) {
-        //arrayの中に保存するデータがString型であることを明記する
-           array = UserDefaults.standard.object(forKey: "memo") as! [String]
+        switch textField.text {
+        case "":
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+            break
+        default:
+            //現在の配列を取り出す
+            if (UserDefaults.standard.object(forKey: "memo") != nil) {
+                //arrayの中に保存するデータがString型であることを明記する
+                array = UserDefaults.standard.object(forKey: "memo") as! [String]
+            }
         }
+        
+        /*
+        if (textField.text == String("")) {
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+            
+            
+            }
+        */
+        
+        
         
         //arrayの中にtextFieldのtextプロパティを追加する
         array.append(textField.text!)
