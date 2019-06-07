@@ -21,20 +21,28 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func addText(_ sender: UIButton) {
         
-        //現在の配列を配列を取り出す
+        //現在の配列を取り出す
         if (UserDefaults.standard.object(forKey: "memo") != nil) {
+        //arrayの中に保存するデータがString型であることを明記する
            array = UserDefaults.standard.object(forKey: "memo") as! [String]
         }
         
+        //arrayの中にtextFieldのtextプロパティを追加する
         array.append(textField.text!)
+        //保存が完了
         UserDefaults.standard.set(array, forKey: "memo")
         
+        //追加ボタンを押した際に1つ前の画面に遷移させる
         self.navigationController?.popViewController(animated: true)
         
     }
     
+    //上の方でUITextFieldDelegateと書いた時点で使えるようになるデリゲートメソッド
+    //return key が押されたタイミングでキーボードを閉じる
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        resignFirstResponder()
+        
+        //return key が押されたタイミングでキーボードを閉じる
+        textField.resignFirstResponder()
         return true
     }
 
