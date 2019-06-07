@@ -35,6 +35,10 @@ class AddViewController: UIViewController, UITextFieldDelegate {
             if (UserDefaults.standard.object(forKey: "memo") != nil) {
                 //arrayの中に保存するデータがString型であることを明記する
                 array = UserDefaults.standard.object(forKey: "memo") as! [String]
+                //arrayの中にtextFieldのtextプロパティを追加する
+                array.append(textField.text!)
+                //保存が完了
+                UserDefaults.standard.set(array, forKey: "memo")
             }
         }
         
@@ -53,10 +57,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         
         
         
-        //arrayの中にtextFieldのtextプロパティを追加する
-        array.append(textField.text!)
-        //保存が完了
-        UserDefaults.standard.set(array, forKey: "memo")
+        
         
         //追加ボタンを押した際に1つ前の画面に遷移させる
         self.navigationController?.popViewController(animated: true)
